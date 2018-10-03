@@ -1,0 +1,11 @@
+.idea
+out/
+*.iml
+
+*.bin
+*.class
+*.zip
+*.pdf
+*.rar
+
+
