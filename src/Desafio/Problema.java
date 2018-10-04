@@ -2,14 +2,12 @@ package Desafio;
 
 import mx.com.sintelti.desafios.oporx.Solucion;
 
+import javax.print.DocFlavor;
+
 public class Problema implements Solucion {
-    private String  entrada;
+    private String entrada;
 
-    public  Problema(){
-        //entrada="Desconocida";
-        entrada= convertir(entrada);
 
-    }
 
 
     @Override
@@ -23,7 +21,7 @@ public class Problema implements Solucion {
         int indexFin = 0;
 
         for (int i = 0; i< entrada.length(); i++){
-            if (cadenaPrincipal[i] == 'o' ){
+            if (cadenaPrincipal[i] == 'o' | cadenaPrincipal[i] == 'O' ){
                 contador++;
                 remplazarX = Remplazar(contador);
                 //System.out.println(i);
@@ -52,8 +50,9 @@ public class Problema implements Solucion {
             return entrada;
 
         }
-        public void setEntrada (String entrada){
-            this.entrada = entrada;
+        public String setEntrada (String entrada){
+            entrada= convertir(entrada);
+            return entrada;
         }
 
 
